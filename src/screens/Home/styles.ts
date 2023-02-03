@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   content: {
     backgroundColor: "#1A1A1A",
     height: "100%",
+    paddingHorizontal: 24,
   },
   inputArea: {
     marginTop: -35,
@@ -15,10 +16,11 @@ export const styles = StyleSheet.create({
 		width: 327,
 		height: 54,
 		borderRadius: 8,
-		borderColor: "#0D0D0D",
+		borderWidth: 1,
 		backgroundColor: "#262626",
 		padding: 16,
 		marginRight: 4,
+		color: "#D9D9D9",
 	},
 	addTaskButton: {
 		flexDirection: "row",
@@ -29,57 +31,40 @@ export const styles = StyleSheet.create({
 		alignItems: "center",
     justifyContent: "center",
 	},
-	containerContent: {
-		paddingHorizontal: 24
-	},
+
 	infoContent: {
 		flexDirection: "row",
 		justifyContent: "space-between",
 		marginTop: 32,
 		marginBottom: 20,
 	},
-	textCreated: {
+	contentDetails: {
+		flexDirection: "row",
+	},
+	textStatusCreate: {
 		fontWeight: "bold",
 		fontSize: 14,
 		color: "#4EA8DE",
+		marginRight: 8,
 	},
-	textFinished: {
+	textStatusFinished: {
 		fontWeight: "bold",
 		fontSize: 14,
 		color: "#8284FA",
+		marginRight: 8,
 	},
-	emptyTask: {
-		justifyContent: "center",
-		alignItems: "center",
-		borderRadius: 8,
-		borderTopColor: "#808080",
-		borderTopWidth: 1,
-	},
-	createdSpan:{
+	span:{
 		width: 25,
 		height: 19,
 		borderRadius: 999,
-		color: "#D9D9D9",
 		backgroundColor: "#333333",
-		paddingHorizontal: 8,
-		paddingVertical: 2,
+		justifyContent: "flex-start",
 	},
-	finishedSpan:{
-		width: 25,
-		height: 19,
-		borderRadius: 99,
-		color: "#D9D9D9",
-		backgroundColor: "#333333"
-	},
-	textEmpty1:{
+	spanText: {
 		fontWeight: "bold",
-		fontSize: 14,
-		color: "#808080",
-		marginTop: 16,
-	},
-	textEmpty2:{
-		fontSize: 14,
-		color: "#808080"
+		color: "#D9D9D9",
+		textAlign: "center",
+		marginTop: 1,
 	},
 });
 
