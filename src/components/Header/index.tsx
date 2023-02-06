@@ -1,11 +1,12 @@
 import { Text, View } from "react-native";
 import { styles } from "./styles";
-import Rocket from "../../../assets/Logo.svg"
-
+import { RocketLogo  } from "../../../Icons/Logo";
 export function Header(){
 	return (
 		<View style={styles.content}>
-			{/* <Rocket /> */}
+			<View style={styles.logo}>
+			<RocketLogo/>
+			</View>
 			<Text style={styles.textTo}>to</Text>
 			<Text style={styles.textDo}>do</Text>
 		</View>

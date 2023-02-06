@@ -1,12 +1,15 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  content: {
-    backgroundColor: "#0D0D0D",
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 173,
-    flexDirection: "row",
+	content: {
+		backgroundColor: "#0D0D0D",
+		alignItems: 'center',
+		justifyContent: 'center',
+		height: 173,
+		flexDirection: "row",
+	},
+  logo: {
+		margin: 12,
   },
   textTo: {
 		fontWeight: "bold",

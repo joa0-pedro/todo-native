@@ -10,6 +10,10 @@ export const styles = StyleSheet.create({
 		flexDirection: "row",
 		marginBottom: 8,
 	},
+	finishButton: {
+		flexDirection: "row",
+		alignItems: "center",
+	},
 	markerButton: {
 		marginRight: 8,
 	},
@@ -20,6 +24,14 @@ export const styles = StyleSheet.create({
 	},
 	deleteButton: {
 		marginLeft: 8,
+		marginRight: 2,
 		// padding: 10,
+	},
+	descriptionDisabled: {
+		fontSize: 14,
+		color: "#808080",
+		width: 293,
+		textDecorationLine: "line-through",
+		textDecorationColor: "#808080"
 	},
 });

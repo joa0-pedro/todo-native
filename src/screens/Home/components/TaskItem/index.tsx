@@ -1,32 +1,31 @@
-import { Circle, Trash } from "phosphor-react-native";
+import { CheckCircle, Circle, Trash } from "phosphor-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
+import { TaskData } from "../..";
 import { styles } from "./styles";
 
-type TaskProps = {
-	content: string;
-	isFinished: boolean;
+interface TaskProps  {
+	task: TaskData;
 	onRemove: () => void;
 	onFinish: () => void;
 }
 
-export function TaskItem({content, onRemove}:TaskProps){
-	function onFinish(){
-
-	}
-
+export function TaskItem({ task, onFinish, onRemove }:TaskProps){
 	return (
 		<View style={styles.taskCard}>
-			<View style={styles.markerButton} >
-			<TouchableOpacity onPress={onFinish}>
-			<Circle size={17} color="#4EA8DE" weight="bold"/>
-			</TouchableOpacity>
-			</View>
-			<Text style={styles.description}>{content}</Text>
-			<View style={styles.deleteButton}>
-			<TouchableOpacity onPress={onRemove}>
-				<Trash size={17} color="#808080" weight="bold" />
-			</TouchableOpacity>
-			</View>
+
+				<>
+				<TouchableOpacity onPress={onFinish} hitSlop={{top: 23, bottom: 22, left: 20, right: 280}}>
+				<View style={styles.markerButton} >
+				{task.isFinished ? (<CheckCircle size={20} weight="fill" color="#5E60CE"/>) : (<Circle size={20} color="#1E6F9F"/>)}
+				</View>
+				</TouchableOpacity>
+				{task.isFinished ? (<Text style={styles.descriptionDisabled}>{task.content}</Text>) : (<Text style={styles.description}>{task.content}</Text>) }
+				<View style={styles.deleteButton}>
+				<TouchableOpacity onPress={onRemove} hitSlop={{top: 25, bottom: 24, left: 20, right: 40}}>
+					<Trash size={17} color="#808080" weight="bold" />
+				</TouchableOpacity>
+				</View>
+			</>
 		</View>
 	)
 }
